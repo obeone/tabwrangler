@@ -84,5 +84,25 @@
   "extension_resume": {
     "description": "Label for button that resumes (unpauses) the extension",
     "message": "மீள் துவங்குக"
+  },
+  "options_option_autoLockException_label": {
+    "description": "Label preceding input for adding whitelist exception",
+    "message": "Allow auto-closing of whitelisted tabs with URLs containing:"
+  },
+  "options_option_autoLockException_add": {
+    "description": "Button label for adding a whitelist exception",
+    "message": "Add exception"
+  },
+  "options_option_autoLockException_example": {
+    "description": "Example describing how whitelist exceptions work",
+    "message": "Example: \"cnn\" would match every whitelisted page on \"https://www.cnn.com\" and any URL with \"cnn\" anywhere in it."
+  },
+  "options_option_autoLockException_empty": {
+    "description": "Message shown when there are no whitelist exceptions",
+    "message": "No whitelist exceptions yet. Use the form above to add some."
+  },
+  "tabLock_lockedReason_whitelisted": {
+    "description": "Label for a tab locked because it matches the whitelist",
+    "message": "Auto-Locked"
   }
 }
