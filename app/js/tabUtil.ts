@@ -5,6 +5,7 @@ import {
   setTabTime,
   setTabTimes,
 } from "./actions/localStorageActions";
+import minimatch from "minimatch";
 import settings from "./settings";
 
 type WrangleOption = "exactURLMatch" | "hostnameAndTitleMatch" | "withDuplicates";
@@ -150,17 +151,30 @@ export async function updateLastAccessed(tabOrTabId: chrome.tabs.Tab | number): 
   }
 }
 
+/**
+ * Determine which whitelist pattern matches a URL using minimatch.
+ *
+ * Args:
+ *     url (string | undefined): URL to check.
+ *     whitelist (string[]): List of whitelist patterns.
+ *
+ * Returns:
+ *     string | null: Matching pattern, or null if none matched or a negated pattern applies.
+ */
 export function getWhitelistMatch(
   url: string | undefined,
   { whitelist }: { whitelist: string[] },
 ): string | null {
   if (url == null) return null;
-  for (let i = 0; i < whitelist.length; i++) {
-    if (url.indexOf(whitelist[i]) !== -1) {
-      return whitelist[i];
+  let match: string | null = null;
+  for (const pattern of whitelist) {
+    const isNegated = pattern.startsWith("!");
+    const checkPattern = isNegated ? pattern.slice(1) : pattern;
+    if (minimatch(url, checkPattern)) {
+      match = isNegated ? null : pattern;
     }
   }
-  return null;
+  return match;
 }
 
 export function isTabLocked(

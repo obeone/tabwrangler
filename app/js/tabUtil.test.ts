@@ -3,6 +3,7 @@ import {
   findPositionByHostnameAndTitle,
   findPositionByURL,
   getURLPositionFilterByWrangleOption,
+  getWhitelistMatch,
   wrangleTabsAndPersist,
 } from "./tabUtil";
 import { TextEncoder } from "util";
@@ -220,5 +221,21 @@ describe("getURLPositionFilterByWrangleOption", () => {
     const filterFunction = getURLPositionFilterByWrangleOption([], "hostnameAndTitleMatch");
     expect(filterFunction).not.toBeNull();
     expect(filterFunction(createTab({ url: "http://www.test.com", title: "test" }))).toBe(-1);
+  });
+});
+
+describe("getWhitelistMatch", () => {
+  test("matches wildcard patterns", () => {
+    const whitelist = ["https://*.example.com/*"];
+    const url = "https://sub.example.com/page";
+    expect(getWhitelistMatch(url, { whitelist })).toBe("https://*.example.com/*");
+  });
+
+  test("supports negated patterns", () => {
+    const whitelist = ["https://example.com/*", "!https://example.com/private*"];
+    expect(getWhitelistMatch("https://example.com/private", { whitelist })).toBeNull();
+    expect(getWhitelistMatch("https://example.com/public", { whitelist })).toBe(
+      "https://example.com/*",
+    );
   });
 });
