@@ -353,22 +353,22 @@
   },
   "options_option_autoLockException_label": {
     "description": "Label preceding input for adding whitelist exception",
-    "message": "Allow auto-closing of whitelisted tabs with URLs containing:"
+    "message": "Permitir el cierre automático de las pestañas con la lista blanca con URL que contienen:"
   },
   "options_option_autoLockException_add": {
     "description": "Button label for adding a whitelist exception",
-    "message": "Add exception"
+    "message": "Agregar excepción"
   },
   "options_option_autoLockException_example": {
     "description": "Example describing how whitelist exceptions work",
-    "message": "Example: \"cnn\" would match every whitelisted page on \"https://www.cnn.com\" and any URL with \"cnn\" anywhere in it."
+    "message": "Ejemplo: \"CNN\" coincidiría con cada página con la lista blanca en \"https://www.cnn.com\" y cualquier URL con \"CNN\" en cualquier lugar."
   },
   "options_option_autoLockException_empty": {
     "description": "Message shown when there are no whitelist exceptions",
-    "message": "No whitelist exceptions yet. Use the form above to add some."
+    "message": "No hay excepciones de la lista blanca todavía. Use el formulario anterior para agregar algunos."
   },
   "tabLock_lockedReason_whitelisted": {
     "description": "Label for a tab locked because it matches the whitelist",
-    "message": "Auto-Locked"
+    "message": "Bloqueado automáticamente"
   }
 }

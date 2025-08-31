@@ -439,22 +439,22 @@
   },
   "options_option_autoLockException_label": {
     "description": "Label preceding input for adding whitelist exception",
-    "message": "Allow auto-closing of whitelisted tabs with URLs containing:"
+    "message": "允许使用包含URL的白色标签自动关闭："
   },
   "options_option_autoLockException_add": {
     "description": "Button label for adding a whitelist exception",
-    "message": "Add exception"
+    "message": "添加异常"
   },
   "options_option_autoLockException_example": {
     "description": "Example describing how whitelist exceptions work",
-    "message": "Example: \"cnn\" would match every whitelisted page on \"https://www.cnn.com\" and any URL with \"cnn\" anywhere in it."
+    "message": "示例：“ CNN”将匹配“ https://www.cnn.com”上的每个白名单页面，并且在其中任何地方都带有“ CNN”的任何URL。"
   },
   "options_option_autoLockException_empty": {
     "description": "Message shown when there are no whitelist exceptions",
-    "message": "No whitelist exceptions yet. Use the form above to add some."
+    "message": "还没有白名单的例外。使用上面的表格添加一些。"
   },
   "tabLock_lockedReason_whitelisted": {
     "description": "Label for a tab locked because it matches the whitelist",
-    "message": "Auto-Locked"
+    "message": "自动锁定"
   }
 }

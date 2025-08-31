@@ -85,22 +85,22 @@
   },
   "options_option_autoLockException_label": {
     "description": "Label preceding input for adding whitelist exception",
-    "message": "Allow auto-closing of whitelisted tabs with URLs containing:"
+    "message": "Zezwalaj na automatyczne zamykanie zakładek białych za pomocą adresów URL zawierających:"
   },
   "options_option_autoLockException_add": {
     "description": "Button label for adding a whitelist exception",
-    "message": "Add exception"
+    "message": "Dodaj wyjątek"
   },
   "options_option_autoLockException_example": {
     "description": "Example describing how whitelist exceptions work",
-    "message": "Example: \"cnn\" would match every whitelisted page on \"https://www.cnn.com\" and any URL with \"cnn\" anywhere in it."
+    "message": "Przykład: „CNN” pasowałby do każdej strony białej na „https://www.cnn.com” i dowolnym adresie URL z „CNN” w dowolnym miejscu."
   },
   "options_option_autoLockException_empty": {
     "description": "Message shown when there are no whitelist exceptions",
-    "message": "No whitelist exceptions yet. Use the form above to add some."
+    "message": "Nie ma jeszcze wyjątków białej. Użyj powyższego formularza, aby dodać trochę."
   },
   "tabLock_lockedReason_whitelisted": {
     "description": "Label for a tab locked because it matches the whitelist",
-    "message": "Auto-Locked"
+    "message": "Automatycznie zablokowane"
   }
 }

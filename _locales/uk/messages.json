@@ -526,22 +526,22 @@
   },
   "options_option_autoLockException_label": {
     "description": "Label preceding input for adding whitelist exception",
-    "message": "Allow auto-closing of whitelisted tabs with URLs containing:"
+    "message": "Дозвольте автоматизувати вкладки з білизнями з URL-адресами, що містять:"
   },
   "options_option_autoLockException_add": {
     "description": "Button label for adding a whitelist exception",
-    "message": "Add exception"
+    "message": "Додати виняток"
   },
   "options_option_autoLockException_example": {
     "description": "Example describing how whitelist exceptions work",
-    "message": "Example: \"cnn\" would match every whitelisted page on \"https://www.cnn.com\" and any URL with \"cnn\" anywhere in it."
+    "message": "Приклад: \"CNN\" відповідатиме кожній сторінці з білим сповіщенням на \"https://www.cnn.com\" та будь -яку URL -адресу з \"CNN\" в будь -якому місці."
   },
   "options_option_autoLockException_empty": {
     "description": "Message shown when there are no whitelist exceptions",
-    "message": "No whitelist exceptions yet. Use the form above to add some."
+    "message": "Ще немає винятків у біло -біліти. Використовуйте форму вище, щоб додати деякі."
   },
   "tabLock_lockedReason_whitelisted": {
     "description": "Label for a tab locked because it matches the whitelist",
-    "message": "Auto-Locked"
+    "message": "Автоматично заблоковано"
   }
 }

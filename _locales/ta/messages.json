@@ -87,22 +87,22 @@
   },
   "options_option_autoLockException_label": {
     "description": "Label preceding input for adding whitelist exception",
-    "message": "Allow auto-closing of whitelisted tabs with URLs containing:"
+    "message": "URL களுடன் அனுமதிப்பட்டியல் தாவல்களை தானாக மூடிமறைக்க அனுமதிக்கவும்:"
   },
   "options_option_autoLockException_add": {
     "description": "Button label for adding a whitelist exception",
-    "message": "Add exception"
+    "message": "விதிவிலக்கு சேர்க்கவும்"
   },
   "options_option_autoLockException_example": {
     "description": "Example describing how whitelist exceptions work",
-    "message": "Example: \"cnn\" would match every whitelisted page on \"https://www.cnn.com\" and any URL with \"cnn\" anywhere in it."
+    "message": "எடுத்துக்காட்டு: \"சி.என்.என்\" \"https://www.cnn.com\" இல் உள்ள ஒவ்வொரு அனுமதிப்பட்டியல் பக்கத்திலும், அதில் எங்கும் \"சி.என்.என்\" கொண்ட எந்த URL க்கும் பொருந்தும்."
   },
   "options_option_autoLockException_empty": {
     "description": "Message shown when there are no whitelist exceptions",
-    "message": "No whitelist exceptions yet. Use the form above to add some."
+    "message": "இன்னும் அனுமதிப்பட்டிய விதிவிலக்குகள் இல்லை. சில சேர்க்க மேலே உள்ள படிவத்தைப் பயன்படுத்தவும்."
   },
   "tabLock_lockedReason_whitelisted": {
     "description": "Label for a tab locked because it matches the whitelist",
-    "message": "Auto-Locked"
+    "message": "தானாக பூட்டப்பட்டிருக்கும்"
   }
 }

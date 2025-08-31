@@ -5,22 +5,22 @@
   },
   "options_option_autoLockException_label": {
     "description": "Label preceding input for adding whitelist exception",
-    "message": "Allow auto-closing of whitelisted tabs with URLs containing:"
+    "message": "Επιτρέψτε την αυτόματη κλίση των καρτελών με λοξότμρες με διευθύνσεις URL που περιέχουν:"
   },
   "options_option_autoLockException_add": {
     "description": "Button label for adding a whitelist exception",
-    "message": "Add exception"
+    "message": "Προσθέστε εξαίρεση"
   },
   "options_option_autoLockException_example": {
     "description": "Example describing how whitelist exceptions work",
-    "message": "Example: \"cnn\" would match every whitelisted page on \"https://www.cnn.com\" and any URL with \"cnn\" anywhere in it."
+    "message": "Παράδειγμα: Το \"CNN\" θα ταιριάζει με κάθε σελίδα με λευκόχρυσο στο \"https://www.cnn.com\" και οποιαδήποτε διεύθυνση URL με \"CNN\" οπουδήποτε σε αυτό."
   },
   "options_option_autoLockException_empty": {
     "description": "Message shown when there are no whitelist exceptions",
-    "message": "No whitelist exceptions yet. Use the form above to add some."
+    "message": "Δεν υπάρχουν ακόμη εξαιρέσεις λευκής λίστας. Χρησιμοποιήστε την παραπάνω φόρμα για να προσθέσετε μερικά."
   },
   "tabLock_lockedReason_whitelisted": {
     "description": "Label for a tab locked because it matches the whitelist",
-    "message": "Auto-Locked"
+    "message": "Αυτόματα κλειδωμένο"
   }
 }

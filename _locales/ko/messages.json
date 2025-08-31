@@ -455,22 +455,22 @@
   },
   "options_option_autoLockException_label": {
     "description": "Label preceding input for adding whitelist exception",
-    "message": "Allow auto-closing of whitelisted tabs with URLs containing:"
+    "message": "URL이 포함 된 화이트리스트 탭의 자동 폐쇄 허용 :"
   },
   "options_option_autoLockException_add": {
     "description": "Button label for adding a whitelist exception",
-    "message": "Add exception"
+    "message": "예외를 추가하십시오"
   },
   "options_option_autoLockException_example": {
     "description": "Example describing how whitelist exceptions work",
-    "message": "Example: \"cnn\" would match every whitelisted page on \"https://www.cnn.com\" and any URL with \"cnn\" anywhere in it."
+    "message": "예 : \"CNN\"은 \"https://www.cnn.com\"의 모든 화이트리스트 페이지와 \"CNN\"이있는 모든 URL과 일치합니다."
   },
   "options_option_autoLockException_empty": {
     "description": "Message shown when there are no whitelist exceptions",
-    "message": "No whitelist exceptions yet. Use the form above to add some."
+    "message": "아직 화이트리스트 예외는 없습니다. 위의 양식을 사용하여 일부를 추가하십시오."
   },
   "tabLock_lockedReason_whitelisted": {
     "description": "Label for a tab locked because it matches the whitelist",
-    "message": "Auto-Locked"
+    "message": "자동으로 잠겼습니다"
   }
 }
