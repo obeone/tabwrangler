@@ -13,7 +13,7 @@
   },
   "options_option_autoLockException_example": {
     "description": "Example describing how whitelist exceptions work",
-    "message": "Παράδειγμα: Το \"CNN\" θα ταιριάζει με κάθε σελίδα με λευκόχρυσο στο \"https://www.cnn.com\" και οποιαδήποτε διεύθυνση URL με \"CNN\" οπουδήποτε σε αυτό."
+    "message": "Example: \"cnn.com/sports\" would match the page \"https://www.cnn.com/sports\" and any URL containing \"cnn.com/sports\"."
   },
   "options_option_autoLockException_empty": {
     "description": "Message shown when there are no whitelist exceptions",

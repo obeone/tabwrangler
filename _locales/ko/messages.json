@@ -463,7 +463,7 @@
   },
   "options_option_autoLockException_example": {
     "description": "Example describing how whitelist exceptions work",
-    "message": "예 : \"CNN\"은 \"https://www.cnn.com\"의 모든 화이트리스트 페이지와 \"CNN\"이있는 모든 URL과 일치합니다."
+    "message": "Example: \"cnn.com/sports\" would match the page \"https://www.cnn.com/sports\" and any URL containing \"cnn.com/sports\"."
   },
   "options_option_autoLockException_empty": {
     "description": "Message shown when there are no whitelist exceptions",

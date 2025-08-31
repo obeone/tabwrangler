@@ -13,7 +13,7 @@
   },
   "options_option_autoLockException_example": {
     "description": "Example describing how whitelist exceptions work",
-    "message": "Exemplu: „CNN” s -ar potrivi cu fiecare pagină cu lista albă de pe „https://www.cnn.com” și orice adresă URL cu „CNN” oriunde în ea."
+    "message": "Example: \"cnn.com/sports\" would match the page \"https://www.cnn.com/sports\" and any URL containing \"cnn.com/sports\"."
   },
   "options_option_autoLockException_empty": {
     "description": "Message shown when there are no whitelist exceptions",

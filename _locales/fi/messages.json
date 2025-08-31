@@ -13,7 +13,7 @@
   },
   "options_option_autoLockException_example": {
     "description": "Example describing how whitelist exceptions work",
-    "message": "Esimerkki: \"CNN\" vastaa kaikkia sallittuja sivuja \"https://www.cnn.com\" ja kaikki URL -osoitteet \"CNN\" -sovelluksella missä tahansa siinä."
+    "message": "Example: \"cnn.com/sports\" would match the page \"https://www.cnn.com/sports\" and any URL containing \"cnn.com/sports\"."
   },
   "options_option_autoLockException_empty": {
     "description": "Message shown when there are no whitelist exceptions",

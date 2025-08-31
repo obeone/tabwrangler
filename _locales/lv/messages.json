@@ -433,7 +433,7 @@
   },
   "options_option_autoLockException_example": {
     "description": "Example describing how whitelist exceptions work",
-    "message": "Piemērs: \"CNN\" sakrīt ar katru balto sarakstu lapu \"https://www.cnn.com\" un jebkurā URL ar \"CNN\" jebkur tajā vietā."
+    "message": "Example: \"cnn.com/sports\" would match the page \"https://www.cnn.com/sports\" and any URL containing \"cnn.com/sports\"."
   },
   "options_option_autoLockException_empty": {
     "description": "Message shown when there are no whitelist exceptions",

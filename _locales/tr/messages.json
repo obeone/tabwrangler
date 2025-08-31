@@ -13,7 +13,7 @@
   },
   "options_option_autoLockException_example": {
     "description": "Example describing how whitelist exceptions work",
-    "message": "Örnek: \"CNN\", \"https://www.cnn.com\" ve herhangi bir yerde \"CNN\" ile herhangi bir URL üzerindeki her beyaz liste sayfasına eşleşir."
+    "message": "Example: \"cnn.com/sports\" would match the page \"https://www.cnn.com/sports\" and any URL containing \"cnn.com/sports\"."
   },
   "options_option_autoLockException_empty": {
     "description": "Message shown when there are no whitelist exceptions",

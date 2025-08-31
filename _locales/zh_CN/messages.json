@@ -447,7 +447,7 @@
   },
   "options_option_autoLockException_example": {
     "description": "Example describing how whitelist exceptions work",
-    "message": "示例：“ CNN”将匹配“ https://www.cnn.com”上的每个白名单页面，并且在其中任何地方都带有“ CNN”的任何URL。"
+    "message": "Example: \"cnn.com/sports\" would match the page \"https://www.cnn.com/sports\" and any URL containing \"cnn.com/sports\"."
   },
   "options_option_autoLockException_empty": {
     "description": "Message shown when there are no whitelist exceptions",

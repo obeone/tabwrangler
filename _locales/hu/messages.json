@@ -67,7 +67,7 @@
   },
   "options_option_autoLockException_example": {
     "description": "Example describing how whitelist exceptions work",
-    "message": "Példa: A \"CNN\" megegyezik a \"https://www.cnn.com\" és a \"CNN\" bármilyen URL oldalán a \"CNN\" oldalon."
+    "message": "Example: \"cnn.com/sports\" would match the page \"https://www.cnn.com/sports\" and any URL containing \"cnn.com/sports\"."
   },
   "options_option_autoLockException_empty": {
     "description": "Message shown when there are no whitelist exceptions",

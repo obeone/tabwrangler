@@ -405,7 +405,7 @@
   },
   "options_option_autoLockException_example": {
     "description": "Example describing how whitelist exceptions work",
-    "message": "Beispiel: \"CNN\" würde zu jeder whitelisteten Seite \"https://www.cnn.com\" und jede URL mit \"CNN\" überall darin passt."
+    "message": "Example: \"cnn.com/sports\" would match the page \"https://www.cnn.com/sports\" and any URL containing \"cnn.com/sports\"."
   },
   "options_option_autoLockException_empty": {
     "description": "Message shown when there are no whitelist exceptions",

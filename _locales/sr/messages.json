@@ -13,7 +13,7 @@
   },
   "options_option_autoLockException_example": {
     "description": "Example describing how whitelist exceptions work",
-    "message": "Пример: \"ЦНН\" би се ускладио сваку страницу са белицом на \"хттпс: //ввв.цнн.цом\" и било који урл са \"ЦНН\" било где у њему."
+    "message": "Example: \"cnn.com/sports\" would match the page \"https://www.cnn.com/sports\" and any URL containing \"cnn.com/sports\"."
   },
   "options_option_autoLockException_empty": {
     "description": "Message shown when there are no whitelist exceptions",

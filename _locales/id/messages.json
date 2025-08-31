@@ -33,7 +33,7 @@
   },
   "options_option_autoLockException_example": {
     "description": "Example describing how whitelist exceptions work",
-    "message": "Contoh: \"CNN\" akan cocok dengan setiap halaman daftar putih di \"https://www.cnn.com\" dan URL apa pun dengan \"CNN\" di mana saja di dalamnya."
+    "message": "Example: \"cnn.com/sports\" would match the page \"https://www.cnn.com/sports\" and any URL containing \"cnn.com/sports\"."
   },
   "options_option_autoLockException_empty": {
     "description": "Message shown when there are no whitelist exceptions",

@@ -95,7 +95,7 @@
   },
   "options_option_autoLockException_example": {
     "description": "Example describing how whitelist exceptions work",
-    "message": "எடுத்துக்காட்டு: \"சி.என்.என்\" \"https://www.cnn.com\" இல் உள்ள ஒவ்வொரு அனுமதிப்பட்டியல் பக்கத்திலும், அதில் எங்கும் \"சி.என்.என்\" கொண்ட எந்த URL க்கும் பொருந்தும்."
+    "message": "Example: \"cnn.com/sports\" would match the page \"https://www.cnn.com/sports\" and any URL containing \"cnn.com/sports\"."
   },
   "options_option_autoLockException_empty": {
     "description": "Message shown when there are no whitelist exceptions",

@@ -13,7 +13,7 @@
   },
   "options_option_autoLockException_example": {
     "description": "Example describing how whitelist exceptions work",
-    "message": "Ví dụ: \"CNN\" sẽ khớp với mọi trang danh sách trắng trên \"https://www.cnn.com\" và bất kỳ URL nào có \"CNN\" ở bất cứ đâu trong đó."
+    "message": "Example: \"cnn.com/sports\" would match the page \"https://www.cnn.com/sports\" and any URL containing \"cnn.com/sports\"."
   },
   "options_option_autoLockException_empty": {
     "description": "Message shown when there are no whitelist exceptions",
