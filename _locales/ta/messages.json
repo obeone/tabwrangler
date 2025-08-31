@@ -84,5 +84,25 @@
   "extension_resume": {
     "description": "Label for button that resumes (unpauses) the extension",
     "message": "மீள் துவங்குக"
+  },
+  "options_option_autoLockException_label": {
+    "description": "Label preceding input for adding whitelist exception",
+    "message": "URL களுடன் அனுமதிப்பட்டியல் தாவல்களை தானாக மூடிமறைக்க அனுமதிக்கவும்:"
+  },
+  "options_option_autoLockException_add": {
+    "description": "Button label for adding a whitelist exception",
+    "message": "விதிவிலக்கு சேர்க்கவும்"
+  },
+  "options_option_autoLockException_example": {
+    "description": "Example describing how whitelist exceptions work",
+    "message": "Example: \"cnn.com/sports\" would match the page \"https://www.cnn.com/sports\" and any URL containing \"cnn.com/sports\"."
+  },
+  "options_option_autoLockException_empty": {
+    "description": "Message shown when there are no whitelist exceptions",
+    "message": "இன்னும் அனுமதிப்பட்டிய விதிவிலக்குகள் இல்லை. சில சேர்க்க மேலே உள்ள படிவத்தைப் பயன்படுத்தவும்."
+  },
+  "tabLock_lockedReason_whitelisted": {
+    "description": "Label for a tab locked because it matches the whitelist",
+    "message": "தானாக பூட்டப்பட்டிருக்கும்"
   }
 }

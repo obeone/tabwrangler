@@ -150,17 +150,30 @@ export async function updateLastAccessed(tabOrTabId: chrome.tabs.Tab | number): 
   }
 }
 
-export function getWhitelistMatch(
+/**
+ * Determine whether a URL matches the whitelist without hitting any exceptions.
+ *
+ * Args:
+ *   url (string | undefined): The URL to test.
+ *   whitelist (string[]): Patterns that prevent a tab from being closed.
+ *   exceptions (string[]): Patterns that override the whitelist.
+ *
+ * Returns:
+ *   boolean: True when the URL is whitelisted and not excluded by an exception.
+ */
+export function isWhitelisted(
   url: string | undefined,
-  { whitelist }: { whitelist: string[] },
-): string | null {
-  if (url == null) return null;
-  for (let i = 0; i < whitelist.length; i++) {
-    if (url.indexOf(whitelist[i]) !== -1) {
-      return whitelist[i];
-    }
+  whitelist: string[],
+  exceptions: string[],
+): boolean {
+  if (url == null) return false;
+  for (const exception of exceptions) {
+    if (url.indexOf(exception) !== -1) return false;
   }
-  return null;
+  for (const pattern of whitelist) {
+    if (url.indexOf(pattern) !== -1) return true;
+  }
+  return false;
 }
 
 export function isTabLocked(
@@ -170,12 +183,19 @@ export function isTabLocked(
     filterGroupedTabs,
     lockedIds,
     whitelist,
-  }: { filterAudio: boolean; filterGroupedTabs: boolean; lockedIds: number[]; whitelist: string[] },
+    whitelistExceptions,
+  }: {
+    filterAudio: boolean;
+    filterGroupedTabs: boolean;
+    lockedIds: number[];
+    whitelist: string[];
+    whitelistExceptions: string[];
+  },
 ): boolean {
-  const tabWhitelistMatch = getWhitelistMatch(tab.url, { whitelist });
+  const tabWhitelisted = isWhitelisted(tab.url, whitelist, whitelistExceptions);
   return (
     tab.pinned ||
-    !!tabWhitelistMatch ||
+    tabWhitelisted ||
     (tab.id != null && lockedIds.indexOf(tab.id) !== -1) ||
     !!(filterGroupedTabs && "groupId" in tab && tab.groupId > 0) ||
     !!(tab.audible && filterAudio)

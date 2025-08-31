@@ -1,4 +1,4 @@
-import { AVERAGE_TAB_BYTES_SIZE, getWhitelistMatch, isTabLocked } from "./tabUtil";
+import { AVERAGE_TAB_BYTES_SIZE, isTabLocked, isWhitelisted } from "./tabUtil";
 import Menus from "./menus";
 
 const defaultCache: Record<string, unknown> = {};
@@ -55,6 +55,9 @@ export const SETTINGS_DEFAULTS = {
 
   // An array of patterns to check against. If a URL matches a pattern, it is never locked.
   whitelist: ["about:", "chrome://"],
+
+  // Patterns that override the whitelist and allow a tab to be closed.
+  whitelistExceptions: [],
 
   // Allow duplicate entries in the closed/wrangled tabs list
   wrangleOption: "withDupes",
@@ -137,31 +140,32 @@ const Settings = {
     return this.cache[key] as T;
   },
 
-  getWhitelistMatch(url: string | undefined): string | null {
-    return getWhitelistMatch(url, { whitelist: this.get<Array<string>>("whitelist") });
-  },
-
   isTabLocked(tab: chrome.tabs.Tab): boolean {
     return isTabLocked(tab, {
       filterAudio: this.get("filterAudio"),
       filterGroupedTabs: this.get("filterGroupedTabs"),
       lockedIds: this.get<Array<number>>("lockedIds"),
       whitelist: this.get<Array<string>>("whitelist"),
+      whitelistExceptions: this.get<Array<string>>("whitelistExceptions"),
     });
   },
 
   isTabManuallyLockable(tab: chrome.tabs.Tab): boolean {
-    const tabWhitelistMatch = this.getWhitelistMatch(tab.url);
+    const tabWhitelisted = this.isWhitelisted(tab.url);
     return (
       !tab.pinned &&
-      !tabWhitelistMatch &&
+      !tabWhitelisted &&
       !(tab.audible && this.get("filterAudio")) &&
       !(this.get("filterGroupedTabs") && "groupId" in tab && tab.groupId > 0)
     );
   },
 
-  isWhitelisted(url: string): boolean {
-    return this.getWhitelistMatch(url) !== null;
+  isWhitelisted(url: string | undefined): boolean {
+    return isWhitelisted(
+      url,
+      this.get<Array<string>>("whitelist"),
+      this.get<Array<string>>("whitelistExceptions"),
+    );
   },
 
   lockTab(tabId: number): Promise<void> {

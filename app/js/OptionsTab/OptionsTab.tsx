@@ -24,11 +24,13 @@ export default function OptionsTab() {
   const importExportAlertTimeoutRef = React.useRef<number>();
   const theme: string = syncPersistData?.theme ?? "system";
   const whitelist: string[] = syncData?.whitelist ?? [];
+  const whitelistExceptions: string[] = syncData?.whitelistExceptions ?? [];
   const [errors, setErrors] = React.useState<Error[]>([]);
   const [importExportAlertVisible, setImportExportAlertVisible] = React.useState(false);
   const [importExportErrors, setImportExportErrors] = React.useState<Error[]>([]);
   const [importExportOperationName, setImportExportOperationName] = React.useState("");
   const [newPattern, setNewPattern] = React.useState("");
+  const [newException, setNewException] = React.useState("");
   const saveAlertTimeoutRef = React.useRef<number>();
   const [saveAlertVisible, setSaveAlertVisible] = React.useState(false);
   const [showFilterTabGroupsOption, setShowFilterTabGroupsOption] = React.useState(false);
@@ -56,6 +58,12 @@ export default function OptionsTab() {
     const nextWhitelist = whitelist.slice();
     nextWhitelist.splice(whitelist.indexOf(pattern), 1);
     settingMutation.mutate({ key: "whitelist", value: nextWhitelist });
+  }
+
+  function handleClickRemoveException(pattern: string) {
+    const nextExceptions = whitelistExceptions.slice();
+    nextExceptions.splice(whitelistExceptions.indexOf(pattern), 1);
+    settingMutation.mutate({ key: "whitelistExceptions", value: nextExceptions });
   }
 
   React.useEffect(() => {
@@ -120,6 +128,23 @@ export default function OptionsTab() {
     }
 
     setNewPattern("");
+  }
+
+  function addWhitelistException(event: React.FormEvent<HTMLElement>) {
+    event.preventDefault();
+
+    if (!isValidPattern(newException)) {
+      return;
+    }
+
+    if (whitelistExceptions.indexOf(newException) === -1) {
+      settingMutation.mutate({
+        key: "whitelistExceptions",
+        value: [...whitelistExceptions, newException],
+      });
+    }
+
+    setNewException("");
   }
 
   function handleSettingsChange(event: React.ChangeEvent<HTMLInputElement>) {
@@ -493,6 +518,75 @@ export default function OptionsTab() {
                       className="btn btn-outline-secondary btn-sm my-n1"
                       onClick={() => {
                         handleClickRemovePattern(pattern);
+                      }}
+                    >
+                      {chrome.i18n.getMessage("options_option_autoLock_remove")}
+                    </button>
+                  </td>
+                </tr>
+              ))
+            )}
+          </tbody>
+        </table>
+
+        <div className="row mt-3">
+          <div className="col-8">
+            <form onSubmit={addWhitelistException}>
+              <label className="form-label" htmlFor="wle-add">
+                {chrome.i18n.getMessage("options_option_autoLockException_label")}
+              </label>
+              <div className="input-group">
+                <input
+                  className="form-control"
+                  id="wle-add"
+                  onChange={(event) => {
+                    setNewException(event.target.value);
+                  }}
+                  type="text"
+                  value={newException}
+                />
+                <button
+                  className="btn btn-secondary"
+                  disabled={!isValidPattern(newException)}
+                  id="addToWLE"
+                  type="submit"
+                >
+                  {chrome.i18n.getMessage("options_option_autoLockException_add")}
+                </button>
+              </div>
+              <p className="form-text">
+                {chrome.i18n.getMessage("options_option_autoLockException_example")}
+              </p>
+            </form>
+          </div>
+        </div>
+        <table className="table table-hover">
+          <thead>
+            <tr>
+              <th style={{ width: "100%" }}>
+                {chrome.i18n.getMessage("options_option_autoLock_urlHeader")}
+              </th>
+              <th />
+            </tr>
+          </thead>
+          <tbody>
+            {whitelistExceptions.length === 0 ? (
+              <tr>
+                <td className="text-center" colSpan={2}>
+                  {chrome.i18n.getMessage("options_option_autoLockException_empty")}
+                </td>
+              </tr>
+            ) : (
+              whitelistExceptions.map((pattern) => (
+                <tr className="align-middle" key={pattern}>
+                  <td>
+                    <code>{pattern}</code>
+                  </td>
+                  <td>
+                    <button
+                      className="btn btn-outline-secondary btn-sm my-n1"
+                      onClick={() => {
+                        handleClickRemoveException(pattern);
                       }}
                     >
                       {chrome.i18n.getMessage("options_option_autoLock_remove")}

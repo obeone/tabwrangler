@@ -22,5 +22,25 @@
   "extName": {
     "description": "The name of this extension",
     "message": "Tab Wrangler"
+  },
+  "options_option_autoLockException_label": {
+    "description": "Label preceding input for adding whitelist exception",
+    "message": "Izinkan Tab yang masuk daftar putih dengan URL yang mengandung:"
+  },
+  "options_option_autoLockException_add": {
+    "description": "Button label for adding a whitelist exception",
+    "message": "Tambahkan pengecualian"
+  },
+  "options_option_autoLockException_example": {
+    "description": "Example describing how whitelist exceptions work",
+    "message": "Example: \"cnn.com/sports\" would match the page \"https://www.cnn.com/sports\" and any URL containing \"cnn.com/sports\"."
+  },
+  "options_option_autoLockException_empty": {
+    "description": "Message shown when there are no whitelist exceptions",
+    "message": "Belum ada pengecualian daftar putih. Gunakan formulir di atas untuk menambahkan beberapa."
+  },
+  "tabLock_lockedReason_whitelisted": {
+    "description": "Label for a tab locked because it matches the whitelist",
+    "message": "Secara otomatis terkunci"
   }
 }

@@ -56,5 +56,25 @@
   "options_option_theme_system": {
     "description": "'System' choice for color theme. Uses the preferred color theme of user's OS.",
     "message": "Rendszer"
+  },
+  "options_option_autoLockException_label": {
+    "description": "Label preceding input for adding whitelist exception",
+    "message": "Engedélyezze a hirdetett fülek automatikus bezárását az URL-ekkel, amelyek tartalmazzák:"
+  },
+  "options_option_autoLockException_add": {
+    "description": "Button label for adding a whitelist exception",
+    "message": "Adjon hozzá kivételt"
+  },
+  "options_option_autoLockException_example": {
+    "description": "Example describing how whitelist exceptions work",
+    "message": "Example: \"cnn.com/sports\" would match the page \"https://www.cnn.com/sports\" and any URL containing \"cnn.com/sports\"."
+  },
+  "options_option_autoLockException_empty": {
+    "description": "Message shown when there are no whitelist exceptions",
+    "message": "Nincs még nem telel -kivétel. Használja a fenti űrlapot, hogy hozzáadjon."
+  },
+  "tabLock_lockedReason_whitelisted": {
+    "description": "Label for a tab locked because it matches the whitelist",
+    "message": "Automatikusan zárolva"
   }
 }

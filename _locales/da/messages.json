@@ -2,5 +2,25 @@
   "extName": {
     "description": "The name of this extension",
     "message": "Tab Wrangler"
+  },
+  "options_option_autoLockException_label": {
+    "description": "Label preceding input for adding whitelist exception",
+    "message": "Tillad automatisk lukning af hvidlistede faner med URL'er, der indeholder:"
+  },
+  "options_option_autoLockException_add": {
+    "description": "Button label for adding a whitelist exception",
+    "message": "Tilføj undtagelse"
+  },
+  "options_option_autoLockException_example": {
+    "description": "Example describing how whitelist exceptions work",
+    "message": "Example: \"cnn.com/sports\" would match the page \"https://www.cnn.com/sports\" and any URL containing \"cnn.com/sports\"."
+  },
+  "options_option_autoLockException_empty": {
+    "description": "Message shown when there are no whitelist exceptions",
+    "message": "Der er endnu ingen hvidliste -undtagelser. Brug formularen ovenfor til at tilføje nogle."
+  },
+  "tabLock_lockedReason_whitelisted": {
+    "description": "Label for a tab locked because it matches the whitelist",
+    "message": "Automatisk låst"
   }
 }

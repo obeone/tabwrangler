@@ -82,5 +82,25 @@
   "extension_resume": {
     "description": "Label for button that resumes (unpauses) the extension",
     "message": "Wznów"
+  },
+  "options_option_autoLockException_label": {
+    "description": "Label preceding input for adding whitelist exception",
+    "message": "Zezwalaj na automatyczne zamykanie zakładek białych za pomocą adresów URL zawierających:"
+  },
+  "options_option_autoLockException_add": {
+    "description": "Button label for adding a whitelist exception",
+    "message": "Dodaj wyjątek"
+  },
+  "options_option_autoLockException_example": {
+    "description": "Example describing how whitelist exceptions work",
+    "message": "Example: \"cnn.com/sports\" would match the page \"https://www.cnn.com/sports\" and any URL containing \"cnn.com/sports\"."
+  },
+  "options_option_autoLockException_empty": {
+    "description": "Message shown when there are no whitelist exceptions",
+    "message": "Nie ma jeszcze wyjątków białej. Użyj powyższego formularza, aby dodać trochę."
+  },
+  "tabLock_lockedReason_whitelisted": {
+    "description": "Label for a tab locked because it matches the whitelist",
+    "message": "Automatycznie zablokowane"
   }
 }

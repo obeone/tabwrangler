@@ -42,7 +42,7 @@ export default function OpenTabRow({
   const { data: syncPersistData } = useStorageSyncPersistQuery();
   const now = React.useContext(UseNowContext);
   const paused = syncPersistData?.paused;
-  const tabWhitelistMatch = settings.getWhitelistMatch(tab.url);
+  const tabWhitelisted = settings.isWhitelisted(tab.url);
 
   let lockStatusElement;
   if (isLocked) {
@@ -53,12 +53,8 @@ export default function OpenTabRow({
       reason = <abbr title={chrome.i18n.getMessage("tabLock_lockedReason_audible")}>Locked</abbr>;
     } else if (settings.get("filterGroupedTabs") && "groupId" in tab && tab.groupId > 0) {
       reason = chrome.i18n.getMessage("tabLock_lockedReason_group");
-    } else if (tabWhitelistMatch) {
-      reason = (
-        <abbr title={chrome.i18n.getMessage("tabLock_lockedReason_matches", tabWhitelistMatch)}>
-          Auto-Locked
-        </abbr>
-      );
+    } else if (tabWhitelisted) {
+      reason = chrome.i18n.getMessage("tabLock_lockedReason_whitelisted");
     } else {
       reason = chrome.i18n.getMessage("tabLock_lockedReason_locked");
     }

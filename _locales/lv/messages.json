@@ -422,5 +422,25 @@
   "corral_noTabsMatch": {
     "description": "Message shown when no tabs match the user's search query",
     "message": "Jūsu meklēšanas kritērijiem neatbilst neviena cilne. Izmēģiniet citu vai mazāk specifisku kritēriju."
+  },
+  "options_option_autoLockException_label": {
+    "description": "Label preceding input for adding whitelist exception",
+    "message": "Atļaujiet automātiski slēgt balto sarakstu cilnes ar URL, kas satur:"
+  },
+  "options_option_autoLockException_add": {
+    "description": "Button label for adding a whitelist exception",
+    "message": "Pievienot izņēmumu"
+  },
+  "options_option_autoLockException_example": {
+    "description": "Example describing how whitelist exceptions work",
+    "message": "Example: \"cnn.com/sports\" would match the page \"https://www.cnn.com/sports\" and any URL containing \"cnn.com/sports\"."
+  },
+  "options_option_autoLockException_empty": {
+    "description": "Message shown when there are no whitelist exceptions",
+    "message": "Pagaidām nav baltā saraksta izņēmuma. Izmantojiet iepriekš minēto veidlapu, lai pievienotu dažus."
+  },
+  "tabLock_lockedReason_whitelisted": {
+    "description": "Label for a tab locked because it matches the whitelist",
+    "message": "Automātiski aizslēgts"
   }
 }

@@ -2,5 +2,25 @@
   "extName": {
     "description": "The name of this extension",
     "message": "Tab Wrangler"
+  },
+  "options_option_autoLockException_label": {
+    "description": "Label preceding input for adding whitelist exception",
+    "message": "Salli sallittujen Listated-välilehtien automaattinen sulkeminen URL-osoitteiden kanssa:"
+  },
+  "options_option_autoLockException_add": {
+    "description": "Button label for adding a whitelist exception",
+    "message": "Lisää poikkeus"
+  },
+  "options_option_autoLockException_example": {
+    "description": "Example describing how whitelist exceptions work",
+    "message": "Example: \"cnn.com/sports\" would match the page \"https://www.cnn.com/sports\" and any URL containing \"cnn.com/sports\"."
+  },
+  "options_option_autoLockException_empty": {
+    "description": "Message shown when there are no whitelist exceptions",
+    "message": "Ei vielä sallittujen luetteloiden poikkeuksia. Lisää yllä olevaa lomakketta."
+  },
+  "tabLock_lockedReason_whitelisted": {
+    "description": "Label for a tab locked because it matches the whitelist",
+    "message": "Automaattisesti lukittu"
   }
 }

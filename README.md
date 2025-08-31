@@ -89,10 +89,10 @@ file has the following format:
  * @see https://github.com/DefinitelyTyped/DefinitelyTyped/blob/d693ab3ced5aa2b8d86838f721006b16414bb21e/types/chrome/index.d.ts#L9406
  */
 type TabWranglerExportFormat = {
-  savedTabs: Array<chrome.tabs.Tab>,
-  totalTabsRemoved: number,
-  totalTabsUnwrangled: number,
-  totalTabsWrangled: number
+  savedTabs: Array<chrome.tabs.Tab>;
+  totalTabsRemoved: number;
+  totalTabsUnwrangled: number;
+  totalTabsWrangled: number;
 };
 ```
 
@@ -121,6 +121,7 @@ usages are described in the following table:
 | `showBadgeCount`      | `false`                   |                                                                  | Whether to show the length of the closed tab list as a badge on the URL bar icon                       |
 | `theme`               | `'system'`                | `'dark'`, `'light'`, `'system'`                                  | The color theme to use for Tab Wrangler's popup                                                        |
 | `whitelist`           | `['about:', 'chrome://']` |                                                                  | Array of patterns to check against.  If a tab's URL matches a pattern, the tab is never auto-closed    |
+| `whitelistExceptions` | `[]`                      |                                                                  | Array of patterns that override the whitelist; matching tabs may be auto-closed                        |
 | `wrangleOption`       | `'withDupes'`             | `'exactURLMatch'`, `'hostnameAndTitleMatch'`, `'withDupes'`      | How to handle duplicate entries in the closed tabs list                                                |
 <!-- prettier-ignore-end -->
 
