@@ -175,7 +175,7 @@
   },
   "options_option_autoLock_example": {
     "description": "Example describing how the whitelist works",
-    "message": "示例：\"cnn\" 匹配任何包含 \"cnn\" 的 URL。使用 \"!\" 作为前缀可排除匹配的 URL，例如 \"!https://www.cnn.com/private*\"。支持通配符 \"*\"。"
+    "message": "示例：\"cnn\" 匹配任何包含 \"cnn\" 的 URL。使用 \"!\" 作为前缀可排除匹配的 URL，例如 \"!https://www.cnn.com/private*\"。支持通配符 \"*\"。完整的模式语法请参见 https://github.com/isaacs/minimatch。"
   },
   "options_option_autoLock_label": {
     "description": "Label preceeding input for adding URL to whitelist",

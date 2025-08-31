@@ -33,6 +33,14 @@ export default function OptionsTab() {
   const [saveAlertVisible, setSaveAlertVisible] = React.useState(false);
   const [showFilterTabGroupsOption, setShowFilterTabGroupsOption] = React.useState(false);
 
+  const minimatchUrl = "https://github.com/isaacs/minimatch";
+  const whitelistExample = chrome.i18n
+    .getMessage("options_option_autoLock_example")
+    .replace(
+      minimatchUrl,
+      `<a href="${minimatchUrl}" target="_blank" rel="noopener noreferrer">${minimatchUrl}</a>`,
+    );
+
   const [maxTabs, setMaxTabs] = React.useState<number | string>(settings.get<number>("maxTabs"));
 
   function resetMaxTabs() {
@@ -460,9 +468,7 @@ export default function OptionsTab() {
                   {chrome.i18n.getMessage("options_option_autoLock_add")}
                 </button>
               </div>
-              <p className="form-text">
-                {chrome.i18n.getMessage("options_option_autoLock_example")}
-              </p>
+              <p className="form-text" dangerouslySetInnerHTML={{ __html: whitelistExample }} />
             </form>
           </div>
         </div>

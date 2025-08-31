@@ -204,7 +204,7 @@
   },
   "options_option_autoLock_example": {
     "description": "Example describing how the whitelist works",
-    "message": "Приклад: \"cnn\" збігається з будь -якою URL -адресою, що містить \"cnn\". Додайте \"!\" перед шаблоном, щоб виключити відповідні URL, наприклад \"!https://www.cnn.com/private*\". Підтримуються підстановочні знаки \"*\"."
+    "message": "Приклад: \"cnn\" збігається з будь -якою URL -адресою, що містить \"cnn\". Додайте \"!\" перед шаблоном, щоб виключити відповідні URL, наприклад \"!https://www.cnn.com/private*\". Підтримуються підстановочні знаки \"*\". Повний синтаксис шаблонів: https://github.com/isaacs/minimatch."
   },
   "options_option_autoLock_label": {
     "description": "Label preceeding input for adding URL to whitelist",

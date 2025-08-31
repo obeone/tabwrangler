@@ -175,7 +175,7 @@
   },
   "options_option_autoLock_example": {
     "description": "Example describing how the whitelist works",
-    "message": "Piemērs: \"cnn\" atbilst jebkurai URL, kas satur \"cnn\". Pirms raksta pievienojiet \"!\", lai izslēgtu atbilstošās URL, piemēram, \"!https://www.cnn.com/private*\". Tiek atbalstītas aizstājzīmes \"*\"."
+    "message": "Piemērs: \"cnn\" atbilst jebkurai URL, kas satur \"cnn\". Pirms raksta pievienojiet \"!\", lai izslēgtu atbilstošās URL, piemēram, \"!https://www.cnn.com/private*\". Tiek atbalstītas aizstājzīmes \"*\". Skatiet pilno paraugu sintaksi: https://github.com/isaacs/minimatch."
   },
   "options_option_autoLock_label": {
     "description": "Label preceeding input for adding URL to whitelist",
