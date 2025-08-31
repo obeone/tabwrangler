@@ -167,7 +167,7 @@
   },
   "options_option_autoLock_example": {
     "description": "Example describing how the whitelist works",
-    "message": "Ejemplo: \"cnn\" detectaría todas las páginas en el dominio \"https://www.cnn.com\" y cualquier URL que contenga \"cnn\"."
+    "message": "Ejemplo: \"*cnn*\" coincide con cualquier URL que contenga \"cnn\". Prefijo un patrón con \"!\" para excluir URL coincidentes, por ejemplo \"!https://www.cnn.com/private*\"."
   },
   "options_option_autoLock_label": {
     "description": "Label preceeding input for adding URL to whitelist",

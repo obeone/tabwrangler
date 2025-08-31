@@ -183,7 +183,7 @@
   },
   "options_option_autoLock_example": {
     "description": "Example describing how the whitelist works",
-    "message": "예: \"cnn\"은 \"https://www.cnn.com\"의 모든 페이지와 \"cnn\"이 있는 모든 URL과 일치합니다."
+    "message": "예 : \"*cnn*\"은 \"cnn\"을 포함하는 모든 URL과 일치합니다. \"!\" 예를 들어 \"!https://www.cnn.com/private*\"와 같이 일치하는 URL을 제외합니다."
   },
   "options_option_autoLock_label": {
     "description": "Label preceeding input for adding URL to whitelist",

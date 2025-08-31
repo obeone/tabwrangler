@@ -204,7 +204,7 @@
   },
   "options_option_autoLock_example": {
     "description": "Example describing how the whitelist works",
-    "message": "Наприклад: \"cnn\" відповідатиме кожній сторінці з адресою \"https://www.cnn.com\" і кожному посиланню, в якому є \"cnn\"."
+    "message": "Приклад: \"*cnn*\" відповідає будь -якій URL -адресі, що містить \"cnn\". Префікс шаблон з \"!\" Щоб виключити відповідні URL -адреси, наприклад, \"!https://www.cnn.com/private*\"."
   },
   "options_option_autoLock_label": {
     "description": "Label preceeding input for adding URL to whitelist",

@@ -175,7 +175,7 @@
   },
   "options_option_autoLock_example": {
     "description": "Example describing how the whitelist works",
-    "message": "例子：\"cnn\" 可以匹配 \"https://www.cnn.com\" 的每个页面，或者任何网址（URL）含有 \"cnn\" 的页面。"
+    "message": "示例：“*cnn*”匹配包含“ cnn”的任何URL。前缀为“！”图案。为了排除匹配的URL，例如“！https://www.cnn.com/private*”。"
   },
   "options_option_autoLock_label": {
     "description": "Label preceeding input for adding URL to whitelist",
