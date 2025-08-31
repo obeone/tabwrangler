@@ -238,4 +238,15 @@ describe("getWhitelistMatch", () => {
       "https://example.com/*",
     );
   });
+
+  test("matches substring patterns without wildcards", () => {
+    const whitelist = ["example.com"];
+    expect(getWhitelistMatch("https://sub.example.com/page", { whitelist })).toBe("example.com");
+  });
+
+  test("negated substring patterns override matches", () => {
+    const whitelist = ["example.com", "!example.com/private"];
+    expect(getWhitelistMatch("https://example.com/private", { whitelist })).toBeNull();
+    expect(getWhitelistMatch("https://example.com/public", { whitelist })).toBe("example.com");
+  });
 });

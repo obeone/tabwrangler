@@ -166,15 +166,24 @@ export function getWhitelistMatch(
   { whitelist }: { whitelist: string[] },
 ): string | null {
   if (url == null) return null;
-  let match: string | null = null;
+  let firstMatch: string | null = null;
   for (const pattern of whitelist) {
     const isNegated = pattern.startsWith("!");
     const checkPattern = isNegated ? pattern.slice(1) : pattern;
-    if (minimatch(url, checkPattern)) {
-      match = isNegated ? null : pattern;
+    const hasWildcards = ["*", "?", "[", "]", "{", "}", "(", ")"].some((c) =>
+      checkPattern.includes(c),
+    );
+    const matches = hasWildcards ? minimatch(url, checkPattern) : url.includes(checkPattern);
+    if (matches) {
+      if (isNegated) {
+        return null;
+      }
+      if (firstMatch == null) {
+        firstMatch = pattern;
+      }
     }
   }
-  return match;
+  return firstMatch;
 }
 
 export function isTabLocked(

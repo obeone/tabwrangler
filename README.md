@@ -120,22 +120,23 @@ usages are described in the following table:
 | `secondsInactive`     | `0`                       | `0` <= `secondsInactive`                                         | How much time (+ `minutesInactive`) before a tab is considered "stale" and ready to close              |
 | `showBadgeCount`      | `false`                   |                                                                  | Whether to show the length of the closed tab list as a badge on the URL bar icon                       |
 | `theme`               | `'system'`                | `'dark'`, `'light'`, `'system'`                                  | The color theme to use for Tab Wrangler's popup                                                        |
-| `whitelist`           | `['about:', 'chrome://']` |                                                                  | Array of patterns using [minimatch](https://github.com/isaacs/minimatch) syntax. If a tab's URL matches a pattern, the tab is never auto-closed. Prefix patterns with `!` to exclude URLs.    |
+| `whitelist`           | `['about:', 'chrome://']` |                                                                  | Array of patterns using [minimatch](https://github.com/isaacs/minimatch) syntax. Patterns without special glob characters match anywhere in the URL for backward compatibility. Prefix patterns with `!` to exclude URLs.    |
 | `wrangleOption`       | `'withDupes'`             | `'exactURLMatch'`, `'hostnameAndTitleMatch'`, `'withDupes'`      | How to handle duplicate entries in the closed tabs list                                                |
 <!-- prettier-ignore-end -->
 
 #### Whitelist pattern syntax
 
-Whitelist entries use [minimatch](https://github.com/isaacs/minimatch) patterns. Wildcards like `*` match any characters, `?` matches a single character, and prefixing a pattern with `!` excludes matching URLs. For example:
+Whitelist entries use [minimatch](https://github.com/isaacs/minimatch) patterns. Patterns without wildcards behave as simple substring matches for backward compatibility. Wildcards like `*` match any characters, `?` matches a single character, and prefixing a pattern with `!` excludes matching URLs. For example:
 
 ```
 whitelist = [
+  "example.com",
   "https://*.example.com/*",
   "!https://example.com/private*",
 ]
 ```
 
-The URL `https://sub.example.com/page` matches the first pattern, while `https://example.com/private/foo` is excluded by the second pattern.
+The URL `https://sub.example.com/page` matches the first two patterns, while `https://example.com/private/foo` is excluded by the third pattern.
 
 #### `maxTabs`
 
