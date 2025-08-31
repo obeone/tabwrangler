@@ -5,7 +5,7 @@ import {
   setTabTime,
   setTabTimes,
 } from "./actions/localStorageActions";
-import minimatch from "minimatch";
+import { minimatch } from "minimatch";
 import settings from "./settings";
 
 type WrangleOption = "exactURLMatch" | "hostnameAndTitleMatch" | "withDuplicates";
