@@ -4,6 +4,7 @@ import {
   findPositionByURL,
   getURLPositionFilterByWrangleOption,
   getWhitelistMatch,
+  isTabLocked,
   wrangleTabsAndPersist,
 } from "./tabUtil";
 import { TextEncoder } from "util";
@@ -248,5 +249,18 @@ describe("getWhitelistMatch", () => {
     const whitelist = ["example.com", "!example.com/private"];
     expect(getWhitelistMatch("https://example.com/private", { whitelist })).toBeNull();
     expect(getWhitelistMatch("https://example.com/public", { whitelist })).toBe("example.com");
+  });
+});
+
+describe("isTabLocked", () => {
+  test("ignores whitelist when negated pattern matches", () => {
+    const tab = createTab({ url: "https://www.cnn.com/private" });
+    const result = isTabLocked(tab, {
+      filterAudio: false,
+      filterGroupedTabs: false,
+      lockedIds: [],
+      whitelist: ["cnn", "!cnn.com/private"],
+    });
+    expect(result).toBe(false);
   });
 });

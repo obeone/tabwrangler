@@ -436,5 +436,25 @@
   "corral_noTabsMatch": {
     "description": "Message shown when no tabs match the user's search query",
     "message": "没有标签页匹配您的查询。尝试新查询，或缩减查询关键词。"
+  },
+  "options_option_autoLockException_label": {
+    "description": "Label preceding input for adding whitelist exception",
+    "message": "允许使用包含URL的白色标签自动关闭："
+  },
+  "options_option_autoLockException_add": {
+    "description": "Button label for adding a whitelist exception",
+    "message": "添加异常"
+  },
+  "options_option_autoLockException_example": {
+    "description": "Example describing how whitelist exceptions work",
+    "message": "Example: \"cnn.com/sports\" would match the page \"https://www.cnn.com/sports\" and any URL containing \"cnn.com/sports\"."
+  },
+  "options_option_autoLockException_empty": {
+    "description": "Message shown when there are no whitelist exceptions",
+    "message": "还没有白名单的例外。使用上面的表格添加一些。"
+  },
+  "tabLock_lockedReason_whitelisted": {
+    "description": "Label for a tab locked because it matches the whitelist",
+    "message": "自动锁定"
   }
 }

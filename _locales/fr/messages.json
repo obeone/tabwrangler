@@ -368,5 +368,25 @@
   "corral_noTabsMatch": {
     "description": "Message shown when no tabs match the user's search query",
     "message": "Aucun onglet ne correspond à votre requête. Essayez une nouvelle requête ou une requête moins spécifique."
+  },
+  "options_option_autoLockException_label": {
+    "description": "Label preceding input for adding whitelist exception",
+    "message": "Autoriser la fermeture automatique des onglets à liste blanche avec des URL contenant:"
+  },
+  "options_option_autoLockException_add": {
+    "description": "Button label for adding a whitelist exception",
+    "message": "Ajouter une exception"
+  },
+  "options_option_autoLockException_example": {
+    "description": "Example describing how whitelist exceptions work",
+    "message": "Exemple  : « cnn.com/sports » correspondrait à la page « https://www.cnn.com/sports » et à toute URL contenant « cnn.com/sports »."
+  },
+  "options_option_autoLockException_empty": {
+    "description": "Message shown when there are no whitelist exceptions",
+    "message": "Aucune exception de liste blanche encore. Utilisez le formulaire ci-dessus pour en ajouter."
+  },
+  "tabLock_lockedReason_whitelisted": {
+    "description": "Label for a tab locked because it matches the whitelist",
+    "message": "Verrouillé automatiquement"
   }
 }

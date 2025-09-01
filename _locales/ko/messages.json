@@ -452,5 +452,25 @@
   "corral_noTabsMatch": {
     "description": "Message shown when no tabs match the user's search query",
     "message": "탭을 찾지 못했습니다. 다른 검색어나 조금 일반적인 검색어를 입력해보세요."
+  },
+  "options_option_autoLockException_label": {
+    "description": "Label preceding input for adding whitelist exception",
+    "message": "URL이 포함 된 화이트리스트 탭의 자동 폐쇄 허용 :"
+  },
+  "options_option_autoLockException_add": {
+    "description": "Button label for adding a whitelist exception",
+    "message": "예외를 추가하십시오"
+  },
+  "options_option_autoLockException_example": {
+    "description": "Example describing how whitelist exceptions work",
+    "message": "Example: \"cnn.com/sports\" would match the page \"https://www.cnn.com/sports\" and any URL containing \"cnn.com/sports\"."
+  },
+  "options_option_autoLockException_empty": {
+    "description": "Message shown when there are no whitelist exceptions",
+    "message": "아직 화이트리스트 예외는 없습니다. 위의 양식을 사용하여 일부를 추가하십시오."
+  },
+  "tabLock_lockedReason_whitelisted": {
+    "description": "Label for a tab locked because it matches the whitelist",
+    "message": "자동으로 잠겼습니다"
   }
 }

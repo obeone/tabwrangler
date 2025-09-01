@@ -2,5 +2,29 @@
   "extName": {
     "description": "The name of this extension",
     "message": "Tab Wrangler"
+  },
+  "options_option_autoLockException_label": {
+    "description": "Label preceding input for adding whitelist exception",
+    "message": "Povolte automatické uzavírání karet Whitelistovaných s adresami URL obsahujících:"
+  },
+  "options_option_autoLockException_add": {
+    "description": "Button label for adding a whitelist exception",
+    "message": "Přidat výjimku"
+  },
+  "options_option_autoLockException_example": {
+    "description": "Example describing how whitelist exceptions work",
+    "message": "Example: \"cnn.com/sports\" would match the page \"https://www.cnn.com/sports\" and any URL containing \"cnn.com/sports\"."
+  },
+  "options_option_autoLockException_empty": {
+    "description": "Message shown when there are no whitelist exceptions",
+    "message": "Zatím žádné výjimky z whitelistů. Pomocí výše uvedeného formuláře přidejte některé."
+  },
+  "tabLock_lockedReason_whitelisted": {
+    "description": "Label for a tab locked because it matches the whitelist",
+    "message": "Automaticky uzamčené"
+  },
+  "options_option_autoLock_example": {
+    "description": "Example describing how the whitelist works",
+    "message": "Example: \"cnn\" matches any URL containing \"cnn\". Prefix a pattern with \"!\" to exclude matching URLs, for example \"!https://www.cnn.com/private*\". Wildcards \"*\" are supported. See https://github.com/isaacs/minimatch for full pattern syntax."
   }
 }

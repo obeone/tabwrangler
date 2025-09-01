@@ -89,10 +89,10 @@ file has the following format:
  * @see https://github.com/DefinitelyTyped/DefinitelyTyped/blob/d693ab3ced5aa2b8d86838f721006b16414bb21e/types/chrome/index.d.ts#L9406
  */
 type TabWranglerExportFormat = {
-  savedTabs: Array<chrome.tabs.Tab>,
-  totalTabsRemoved: number,
-  totalTabsUnwrangled: number,
-  totalTabsWrangled: number
+  savedTabs: Array<chrome.tabs.Tab>;
+  totalTabsRemoved: number;
+  totalTabsUnwrangled: number;
+  totalTabsWrangled: number;
 };
 ```
 
