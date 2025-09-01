@@ -125,6 +125,10 @@ usages are described in the following table:
 | `wrangleOption`       | `'withDupes'`             | `'exactURLMatch'`, `'hostnameAndTitleMatch'`, `'withDupes'`      | How to handle duplicate entries in the closed tabs list                                                |
 <!-- prettier-ignore-end -->
 
+Whitelist and exception patterns use [minimatch](https://github.com/isaacs/minimatch) glob syntax. See the [Minimatch documentation](https://github.com/isaacs/minimatch#readme) for more details.
+Patterns without wildcards are treated as substring matches for backward compatibility.
+Prefix a pattern with `!` or add it to `whitelistExceptions` to exclude URLs, for example `!example.com/private`.
+
 #### `maxTabs`
 
 The upper bound of `maxTabs` is determined by the [browser's storage quota][8] and can vary. Tab

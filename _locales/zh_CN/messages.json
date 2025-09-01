@@ -174,7 +174,7 @@
     "message": "尚无自动锁定的网址。使用上面的表单可以添加一些到白名单。"
   },
   "options_option_autoLock_example": {
-    "description": "Example describing how the whitelist works",
+    "description": "Example describing how the whitelist works using minimatch patterns. See https://github.com/isaacs/minimatch for details.",
     "message": "例子：\"cnn\" 可以匹配 \"https://www.cnn.com\" 的每个页面，或者任何网址（URL）含有 \"cnn\" 的页面。"
   },
   "options_option_autoLock_label": {
@@ -446,7 +446,7 @@
     "message": "添加异常"
   },
   "options_option_autoLockException_example": {
-    "description": "Example describing how whitelist exceptions work",
+    "description": "Example describing how whitelist exceptions work using minimatch patterns. See https://github.com/isaacs/minimatch for details.",
     "message": "Example: \"cnn.com/sports\" would match the page \"https://www.cnn.com/sports\" and any URL containing \"cnn.com/sports\"."
   },
   "options_option_autoLockException_empty": {

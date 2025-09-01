@@ -166,7 +166,7 @@
     "message": "Il n'y a pas encore de verrouillage automatique. Utilisez le formulaire ci-dessus pour ajouter à la liste de souhaits."
   },
   "options_option_autoLock_example": {
-    "description": "Example describing how the whitelist works",
+    "description": "Example describing how the whitelist works using minimatch patterns. See https://github.com/isaacs/minimatch for details.",
     "message": "Exemple : « cnn » correspondrait à toutes les pages « https://www.cnn.com » et n’importe quelle URL contenant « cnn » n'importe où."
   },
   "options_option_autoLock_label": {
@@ -378,7 +378,7 @@
     "message": "Ajouter une exception"
   },
   "options_option_autoLockException_example": {
-    "description": "Example describing how whitelist exceptions work",
+    "description": "Example describing how whitelist exceptions work using minimatch patterns. See https://github.com/isaacs/minimatch for details.",
     "message": "Exemple  : « cnn.com/sports » correspondrait à la page « https://www.cnn.com/sports » et à toute URL contenant « cnn.com/sports »."
   },
   "options_option_autoLockException_empty": {

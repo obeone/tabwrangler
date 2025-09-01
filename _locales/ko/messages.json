@@ -182,7 +182,7 @@
     "message": "아직 자동 잠금 URL이 없습니다. 위의 양식을 사용하여 허용 목록에 일부를 추가하십시오."
   },
   "options_option_autoLock_example": {
-    "description": "Example describing how the whitelist works",
+    "description": "Example describing how the whitelist works using minimatch patterns. See https://github.com/isaacs/minimatch for details.",
     "message": "예: \"cnn\"은 \"https://www.cnn.com\"의 모든 페이지와 \"cnn\"이 있는 모든 URL과 일치합니다."
   },
   "options_option_autoLock_label": {
@@ -462,7 +462,7 @@
     "message": "예외를 추가하십시오"
   },
   "options_option_autoLockException_example": {
-    "description": "Example describing how whitelist exceptions work",
+    "description": "Example describing how whitelist exceptions work using minimatch patterns. See https://github.com/isaacs/minimatch for details.",
     "message": "Example: \"cnn.com/sports\" would match the page \"https://www.cnn.com/sports\" and any URL containing \"cnn.com/sports\"."
   },
   "options_option_autoLockException_empty": {

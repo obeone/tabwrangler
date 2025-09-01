@@ -199,7 +199,7 @@
     "message": "Автоматически блокируемые ссылки отсутствуют. Используйте форму выше, чтобы добавить их в белый список."
   },
   "options_option_autoLock_example": {
-    "description": "Example describing how the whitelist works",
+    "description": "Example describing how the whitelist works using minimatch patterns. See https://github.com/isaacs/minimatch for details.",
     "message": "Например: \"cnn\" будет относится к каждой странице с адресом \"https://www.cnn.com\" и каждой ссылке, в которой присутствует \"cnn\"."
   },
   "options_option_autoLock_label": {
@@ -511,7 +511,7 @@
     "message": "Добавить исключение"
   },
   "options_option_autoLockException_example": {
-    "description": "Example describing how whitelist exceptions work",
+    "description": "Example describing how whitelist exceptions work using minimatch patterns. See https://github.com/isaacs/minimatch for details.",
     "message": "Example: \"cnn.com/sports\" would match the page \"https://www.cnn.com/sports\" and any URL containing \"cnn.com/sports\"."
   },
   "options_option_autoLockException_empty": {

@@ -230,8 +230,28 @@ describe("isWhitelisted", () => {
     expect(isWhitelisted("https://www.cnn.com", ["cnn"], [])).toBe(true);
   });
 
-  test("returns false when exception matches", () => {
-    expect(isWhitelisted("https://www.cnn.com", ["cnn"], ["cnn.com"])).toBe(false);
+  test("supports wildcard patterns", () => {
+    expect(isWhitelisted("https://sub.cnn.com/news", ["https://*.cnn.com/*"], [])).toBe(true);
+  });
+
+  test("returns false when exception matches with !", () => {
+    expect(
+      isWhitelisted(
+        "https://example.com/private",
+        ["*://example.com/*"],
+        ["!*://example.com/private*"],
+      ),
+    ).toBe(false);
+  });
+
+  test("supports negated patterns in whitelist", () => {
+    expect(
+      isWhitelisted(
+        "https://example.com/private",
+        ["*://example.com/*", "!*://example.com/private*"],
+        [],
+      ),
+    ).toBe(false);
   });
 });
 
@@ -242,8 +262,8 @@ describe("isTabLocked", () => {
       filterAudio: false,
       filterGroupedTabs: false,
       lockedIds: [],
-      whitelist: ["cnn"],
-      whitelistExceptions: ["cnn.com"],
+      whitelist: ["https://*.cnn.com/*"],
+      whitelistExceptions: ["!https://*.cnn.com/*"],
     });
     expect(result).toBe(false);
   });
