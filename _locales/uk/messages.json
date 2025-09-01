@@ -203,7 +203,7 @@
     "message": "Автоматично заблоковані адреса відсутні. Використовуйте форму вище, щоб додати їх до білого списку."
   },
   "options_option_autoLock_example": {
-    "description": "Example describing how the whitelist works",
+    "description": "Example describing how the whitelist works using minimatch patterns. See https://github.com/isaacs/minimatch for details.",
     "message": "Наприклад: \"cnn\" відповідатиме кожній сторінці з адресою \"https://www.cnn.com\" і кожному посиланню, в якому є \"cnn\"."
   },
   "options_option_autoLock_label": {
@@ -533,7 +533,7 @@
     "message": "Додати виняток"
   },
   "options_option_autoLockException_example": {
-    "description": "Example describing how whitelist exceptions work",
+    "description": "Example describing how whitelist exceptions work using minimatch patterns. See https://github.com/isaacs/minimatch for details.",
     "message": "Example: \"cnn.com/sports\" would match the page \"https://www.cnn.com/sports\" and any URL containing \"cnn.com/sports\"."
   },
   "options_option_autoLockException_empty": {

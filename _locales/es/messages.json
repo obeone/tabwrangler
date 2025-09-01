@@ -166,7 +166,7 @@
     "message": "No hay URLs auto-bloqueadas todavía. Utilice el formulario superior para añadir alguna a la lista blanca."
   },
   "options_option_autoLock_example": {
-    "description": "Example describing how the whitelist works",
+    "description": "Example describing how the whitelist works using minimatch patterns. See https://github.com/isaacs/minimatch for details.",
     "message": "Ejemplo: \"cnn\" detectaría todas las páginas en el dominio \"https://www.cnn.com\" y cualquier URL que contenga \"cnn\"."
   },
   "options_option_autoLock_label": {
@@ -360,7 +360,7 @@
     "message": "Agregar excepción"
   },
   "options_option_autoLockException_example": {
-    "description": "Example describing how whitelist exceptions work",
+    "description": "Example describing how whitelist exceptions work using minimatch patterns. See https://github.com/isaacs/minimatch for details.",
     "message": "Example: \"cnn.com/sports\" would match the page \"https://www.cnn.com/sports\" and any URL containing \"cnn.com/sports\"."
   },
   "options_option_autoLockException_empty": {

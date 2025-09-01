@@ -203,8 +203,8 @@
     "message": "No auto-locking URLs yet. Use the form above to add some to the whitelist."
   },
   "options_option_autoLock_example": {
-    "description": "Example describing how the whitelist works",
-    "message": "Example: \"cnn\" would match every page on \"https://www.cnn.com\" and any URL with \"cnn\" anywhere in it."
+    "description": "Example describing how the whitelist works using minimatch patterns. See https://github.com/isaacs/minimatch for details.",
+    "message": "Example: \"https://*.cnn.com/*\" matches pages on \"https://cnn.com\" and subdomains. Prefix with \"!\" to exclude, e.g., \"!https://cnn.com/private\". See minimatch docs for details."
   },
   "options_option_autoLock_label": {
     "description": "Label preceeding input for adding URL to whitelist",
@@ -533,8 +533,8 @@
     "message": "Add exception"
   },
   "options_option_autoLockException_example": {
-    "description": "Example describing how whitelist exceptions work",
-    "message": "Example: \"cnn.com/sports\" would match the page \"https://www.cnn.com/sports\" and any URL containing \"cnn.com/sports\"."
+    "description": "Example describing how whitelist exceptions work using minimatch patterns. See https://github.com/isaacs/minimatch for details.",
+    "message": "Example: \"cnn.com/sports\" matches \"https://cnn.com/sports\" and subpaths. Patterns follow minimatch syntax; see minimatch docs for details."
   },
   "options_option_autoLockException_empty": {
     "description": "Message shown when there are no whitelist exceptions",

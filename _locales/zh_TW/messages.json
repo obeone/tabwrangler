@@ -166,7 +166,7 @@
     "message": "還沒有自動鎖定的網址。請使用上方的表單新增至名單中。"
   },
   "options_option_autoLock_example": {
-    "description": "Example describing how the whitelist works",
+    "description": "Example describing how the whitelist works using minimatch patterns. See https://github.com/isaacs/minimatch for details.",
     "message": "範例：\"cnn\" 將會符合任何 \"https://www.cnn.com\" 的頁面以及所有出現 \"cnn\" 關鍵字的網址。"
   },
   "options_option_autoLock_label": {
@@ -364,7 +364,7 @@
     "message": "添加異常"
   },
   "options_option_autoLockException_example": {
-    "description": "Example describing how whitelist exceptions work",
+    "description": "Example describing how whitelist exceptions work using minimatch patterns. See https://github.com/isaacs/minimatch for details.",
     "message": "Example: \"cnn.com/sports\" would match the page \"https://www.cnn.com/sports\" and any URL containing \"cnn.com/sports\"."
   },
   "options_option_autoLockException_empty": {

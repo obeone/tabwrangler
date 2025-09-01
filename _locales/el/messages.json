@@ -12,7 +12,7 @@
     "message": "Προσθέστε εξαίρεση"
   },
   "options_option_autoLockException_example": {
-    "description": "Example describing how whitelist exceptions work",
+    "description": "Example describing how whitelist exceptions work using minimatch patterns. See https://github.com/isaacs/minimatch for details.",
     "message": "Example: \"cnn.com/sports\" would match the page \"https://www.cnn.com/sports\" and any URL containing \"cnn.com/sports\"."
   },
   "options_option_autoLockException_empty": {

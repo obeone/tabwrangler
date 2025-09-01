@@ -1,11 +1,13 @@
-import { StorageLocalPersistState, getStorageLocalPersist } from "./queries";
+/* eslint-disable sort-imports */
 import {
   incrementTotalTabsRemoved,
   removeTabTime,
   setTabTime,
   setTabTimes,
 } from "./actions/localStorageActions";
+import { getStorageLocalPersist, StorageLocalPersistState } from "./queries";
 import settings from "./settings";
+import { minimatch } from "minimatch";
 
 type WrangleOption = "exactURLMatch" | "hostnameAndTitleMatch" | "withDuplicates";
 
@@ -167,13 +169,31 @@ export function isWhitelisted(
   exceptions: string[],
 ): boolean {
   if (url == null) return false;
-  for (const exception of exceptions) {
-    if (url.indexOf(exception) !== -1) return false;
+
+  const normalizedExceptions = [
+    ...exceptions,
+    ...whitelist.filter((p) => p.startsWith("!")).map((p) => p.slice(1)),
+  ].map((p) => (p.startsWith("!") ? p.slice(1) : p));
+
+  const positiveWhitelist = whitelist.filter((p) => !p.startsWith("!"));
+
+  for (const pattern of normalizedExceptions) {
+    if (matchesPattern(url, pattern)) return false;
   }
-  for (const pattern of whitelist) {
-    if (url.indexOf(pattern) !== -1) return true;
+
+  for (const pattern of positiveWhitelist) {
+    if (matchesPattern(url, pattern)) return true;
   }
+
   return false;
+}
+
+function matchesPattern(url: string, pattern: string): boolean {
+  const hasWildcard = pattern.includes("*") || pattern.includes("?") || pattern.includes("[");
+  if (hasWildcard) {
+    return minimatch(url, pattern);
+  }
+  return url.includes(pattern);
 }
 
 export function isTabLocked(

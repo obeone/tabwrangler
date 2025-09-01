@@ -166,7 +166,7 @@
     "message": "Kein automatisch geschützten URLs vorhanden. Im oben angegeben Formular können ULs zur Whitelist hinzugefügt werden."
   },
   "options_option_autoLock_example": {
-    "description": "Example describing how the whitelist works",
+    "description": "Example describing how the whitelist works using minimatch patterns. See https://github.com/isaacs/minimatch for details.",
     "message": "Beispiel: \"cnn\" entspricht jeder Seite auf \"https://www.cnn.com\" und jeder URL mit \"cnn\" im Namen."
   },
   "options_option_autoLock_label": {
@@ -404,7 +404,7 @@
     "message": "Ausnahme hinzufügen"
   },
   "options_option_autoLockException_example": {
-    "description": "Example describing how whitelist exceptions work",
+    "description": "Example describing how whitelist exceptions work using minimatch patterns. See https://github.com/isaacs/minimatch for details.",
     "message": "Example: \"cnn.com/sports\" would match the page \"https://www.cnn.com/sports\" and any URL containing \"cnn.com/sports\"."
   },
   "options_option_autoLockException_empty": {
